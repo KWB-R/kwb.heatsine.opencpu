@@ -1,0 +1,27 @@
+Package: kwb.heatsine.opencpu
+Title: Wrapper for R Package kwb.heatsine for OpenCPU Usage
+Version: 0.0.0.9000
+Authors@R: 
+    c(person(given = "Michael",
+             family = "Rustler",
+             role = c("aut", "cre"),
+             email = "michael.rustler@kompetenz-wasser.de",
+             comment = c(ORCID = "0000-0003-0647-7726")),
+      person(given = "Ralf",
+             family = "Junghanns",
+             role = c("aut"),
+             email = "ralf.junghanns@tu-dresden.de",
+             comment = c(ORCID = "")),
+      person(given = "Smart-Control", 
+             role = "fnd"),
+      person(given = "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
+             role = "cph"))
+Description: Contains higher level functions build on top of R
+    package kwb.heatsine for connecting with OPENCPU.
+License: MIT + file LICENSE
+URL: https://github.com/KWB-R/kwb.heatsine.opencpu
+BugReports: https://github.com/KWB-R/kwb.heatsine.opencpu/issues
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
