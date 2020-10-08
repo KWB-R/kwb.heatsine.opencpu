@@ -1,6 +1,6 @@
-[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/KWB-R/kwb.heatsine.opencpu?branch=master&svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-heatsine-opencpu/branch/master)
-[![Travis build Status](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu.svg?branch=master)](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu)
-[![codecov](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu/branch/master/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu)
+[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/KWB-R/kwb.heatsine.opencpu?branch=main&svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-heatsine-opencpu/branch/main)
+[![Travis build Status](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu.svg?branch=main)](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu)
+[![codecov](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu/branch/main/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu)
 [![Project Status](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/kwb.heatsine.opencpu)]()
 
