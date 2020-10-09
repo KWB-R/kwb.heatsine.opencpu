@@ -30,7 +30,7 @@ Imports:
     kwb.heatsine,
     tibble
 Remotes: 
-    github::kwb-r/kwb.heatsine@v0.1.4
+    github::kwb-r/kwb.heatsine@62125b3b652e823a1ec543e2e2ca04b531e0ca43
 Suggests: 
     knitr,
     rmarkdown,
