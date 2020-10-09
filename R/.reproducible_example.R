@@ -1,4 +1,10 @@
-install.packages(pkgs = c("jsonlite", "tibble", "remotes"), repos = "https://cran.rstudio.com")
+repos <- "https://cran.rstudio.com"
+
+install.packages(pkgs = c("jsonlite", "tibble", "remotes"), repos = repos)
+
+# Install package to compare objects
+install.packages("diffobj", repos = repos)
+
 remotes::install_github("kwb-r/kwb.heatsine@v0.1.4")
 ## code to prepare `DATASET` dataset goes here
 ## code to prepare `DATASET` dataset goes here
@@ -41,8 +47,11 @@ json_args <- jsonlite::toJSON(args_list, pretty = TRUE)
 args_list2 <- jsonlite::fromJSON(json_args)
 args_list2$data_gw_selected <- tibble::as_tibble(args_list2$data_gw_selected)
 args_list2$data_sw_selected <- tibble::as_tibble(args_list2$data_sw_selected)
+
 identical(args_list, args_list2)
 
+# Compare str() output for both lists
+diffobj::diffObj(args_list, args_list2)
 
 output <- do.call(kwb.heatsine::run_optimisation, args_list)
 output2 <- do.call(kwb.heatsine::run_optimisation, args_list2)
