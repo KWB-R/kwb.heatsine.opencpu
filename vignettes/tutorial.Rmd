@@ -24,13 +24,21 @@ writeLines(text = kwb.heatsine.opencpu::json_args, "args.json")
 You need to provide the input parameters 
 for `kwb.heatsine.opencpu::run_optimisation()` 
 required in a JSON data structure as provided 
-in the example data [args.json](../args.json) (for details see: `json_args`).
+in the example data [args.json](../args.json) (for details see: 
+`kwb.heatsine.opencpu::json_args`).
 
 
 
 ```{r}
+predictions <- kwb.heatsine.opencpu::run_optimisation(
+  json_args = kwb.heatsine.opencpu::json_args
+  )
 
-kwb.heatsine.opencpu::run_optimisation(json_args = "args.json")
+writeLines(text = predictions, "predictions.json")
+
 ```
 
+The structure of the optimisation results is stored in JSON format in the R object 
+`predictions` and also saved. For inspecting it please open the 
+[predictions.json](../predictions.json) file. 
 

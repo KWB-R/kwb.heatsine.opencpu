@@ -18,6 +18,6 @@ args$data_sw_selected <- tibble::as_tibble(args$data_sw_selected)
 
 output <- base::do.call(kwb.heatsine::run_optimisation, args)
 
-jsonlite::toJSON(output)
+jsonlite::toJSON(output, pretty = TRUE)
 
 }
