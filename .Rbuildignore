@@ -8,3 +8,5 @@
 ^.gitlab-ci\.yml$
 ^appveyor\.yml$
 ^data-raw$
+^codecov\.yml$
+^index\.md$
