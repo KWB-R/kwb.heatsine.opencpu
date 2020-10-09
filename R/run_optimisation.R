@@ -8,10 +8,13 @@
 #' @export
 #' @importFrom kwb.heatsine run_optimisation
 #' @importFrom jsonlite fromJSON toJSON
+#' @importFrom tibble as_tibble
 
 run_optimisation <- function (json_args) {
 
 args <- jsonlite::fromJSON(json_args)
+args$data_gw_selected <- tibble::as_tibble(args$data_gw_selected)
+args$data_sw_selected <- tibble::as_tibble(args$data_sw_selected)
 
 output <- base::do.call(kwb.heatsine::run_optimisation, args)
 

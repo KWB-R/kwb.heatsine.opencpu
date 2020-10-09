@@ -1,0 +1,36 @@
+---
+title: "Tutorial"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tutorial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(kwb.heatsine.opencpu)
+writeLines(text = kwb.heatsine.opencpu::json_args, "args.json")
+```
+
+## Input parameters
+
+You need to provide the input parameters 
+for `kwb.heatsine.opencpu::run_optimisation()` 
+required in a JSON data structure as provided 
+in the example data [args.json](../args.json) (for details see: `json_args`).
+
+
+
+```{r}
+
+kwb.heatsine.opencpu::run_optimisation(json_args = "args.json")
+```
+
+

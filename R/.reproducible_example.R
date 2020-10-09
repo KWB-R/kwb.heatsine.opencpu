@@ -1,3 +1,5 @@
+install.packages(pkgs = c("jsonlite", "tibble", "remotes"), repos = "https://cran.rstudio.com")
+remotes::install_github("kwb-r/kwb.heatsine@v0.1.4")
 ## code to prepare `DATASET` dataset goes here
 ## code to prepare `DATASET` dataset goes here
 load_temp <- function(base_name) {
@@ -32,13 +34,11 @@ args_list <- list(data_sw_selected = data_sw_selected,
                   limits = c(100, 500),
                   tolerance = 0.001,
                   debug = FALSE
-                  )
+)
 
 json_args <- jsonlite::toJSON(args_list, pretty = TRUE)
 
 args_list2 <- jsonlite::fromJSON(json_args)
 args_list2$data_gw_selected <- tibble::as_tibble(args_list2$data_gw_selected)
-args_list2$data_sw_selected <- tibble::as_tibble(args_list2s$data_sw_selected)
+args_list2$data_sw_selected <- tibble::as_tibble(args_list2$data_sw_selected)
 identical(args_list, args_list2)
-
-usethis::use_data(json_args, overwrite = TRUE)

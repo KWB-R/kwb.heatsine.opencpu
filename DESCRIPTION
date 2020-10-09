@@ -27,7 +27,8 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
 Imports: 
     jsonlite,
-    kwb.heatsine
+    kwb.heatsine,
+    tibble
 Remotes: 
     github::kwb-r/kwb.heatsine@v0.1.4
 Suggests: 
