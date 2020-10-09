@@ -22,10 +22,9 @@ kwb.pkgbuild::use_pkg(author,
                       stage = "experimental")
 
 
-usethis::use_vignette("Tutorial")
+usethis::use_vignette("tutorial")
 
 ### R functions
-travis::
 
 kwb.pkgbuild::use_autopkgdown("kwb.heatsine.opencpu")
 
