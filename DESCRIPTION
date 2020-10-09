@@ -1,17 +1,12 @@
 Package: kwb.heatsine.opencpu
 Title: Wrapper for R Package kwb.heatsine for OpenCPU Usage
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: 
     c(person(given = "Michael",
              family = "Rustler",
              role = c("aut", "cre"),
              email = "michael.rustler@kompetenz-wasser.de",
              comment = c(ORCID = "0000-0003-0647-7726")),
-      person(given = "Ralf",
-             family = "Junghanns",
-             role = c("aut"),
-             email = "ralf.junghanns@tu-dresden.de",
-             comment = c(ORCID = "")),
       person(given = "Smart-Control", 
              role = "fnd"),
       person(given = "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
