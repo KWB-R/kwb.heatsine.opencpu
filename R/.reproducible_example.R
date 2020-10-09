@@ -42,3 +42,7 @@ args_list2 <- jsonlite::fromJSON(json_args)
 args_list2$data_gw_selected <- tibble::as_tibble(args_list2$data_gw_selected)
 args_list2$data_sw_selected <- tibble::as_tibble(args_list2$data_sw_selected)
 identical(args_list, args_list2)
+
+
+output <- do.call(kwb.heatsine::run_optimisation, args_list)
+output2 <- do.call(kwb.heatsine::run_optimisation, args_list2)
