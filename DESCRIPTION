@@ -9,10 +9,10 @@ Authors@R:
              comment = c(ORCID = "0000-0003-0647-7726")),
       person(given = "Hauke",
              family = "Sonnenberg",
-             role = c("ctb"),
+             role = "ctb",
              email = "hauke.sonnenberg@kompetenz-wasser.de",
              comment = c(ORCID = "0000-0001-9134-2871")),
-      person(given = "Smart-Control", 
+      person(given = "Smart-Control",
              role = "fnd"),
       person(given = "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
              role = "cph"))
@@ -21,20 +21,21 @@ Description: Contains higher level functions build on top of R
 License: MIT + file LICENSE
 URL: https://github.com/KWB-R/kwb.heatsine.opencpu
 BugReports: https://github.com/KWB-R/kwb.heatsine.opencpu/issues
-Encoding: UTF-8
-LazyData: true
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
 Imports: 
     jsonlite,
     kwb.heatsine,
     tibble
-Remotes: 
-    github::kwb-r/kwb.heatsine@62125b3b652e823a1ec543e2e2ca04b531e0ca43
 Suggests: 
     knitr,
     rmarkdown,
     testthat
-VignetteBuilder: knitr
-Depends: 
-    R (>= 2.10)
+VignetteBuilder: 
+    knitr
+Remotes: 
+    github::kwb-r/kwb.heatsine@62125b3b652e823a1ec543e2e2ca04b531e0ca43
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
