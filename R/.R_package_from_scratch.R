@@ -1,5 +1,5 @@
 ### How to build an R package from scratch
-install.packages(pkgs = c("usethis", "remotes", "usethis", "fs"), repos = "https://cran.rstudio.com")
+install.packages(pkgs = c("desc", "usethis", "remotes", "usethis", "fs"), repos = "https://cran.rstudio.com")
 remotes::install_github("kwb-r/kwb.pkgbuild")
 remotes::install_github("ropenscilabs/travis@v0.3.0.9004")
 usethis::create_package(".")
@@ -34,3 +34,6 @@ kwb.pkgbuild::create_empty_branch_ghpages("kwb.heatsine.opencpu")
 kwb.pkgbuild::use_gitlab_ci_ghpages()
 
 travis::use_travis_deploy(key_name_private = "id_rsa", endpoint = ".com")
+
+sapply(c("jsonlite", "kwb.heatsine"),desc::desc_set_dep)
+desc::desc_add_remotes("github::kwb-r/kwb.heatsine@v0.1.4")

@@ -24,4 +24,9 @@ BugReports: https://github.com/KWB-R/kwb.heatsine.opencpu/issues
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.1
+Imports: 
+    jsonlite,
+    kwb.heatsine
+Remotes: 
+    github::kwb-r/kwb.heatsine@v0.1.4
