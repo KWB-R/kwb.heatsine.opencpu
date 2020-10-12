@@ -13,9 +13,8 @@ test_that("run_optimisation() returns error with no data", {
 })
 
 test_that("run_optimization() works properly", {
-  input <- fromJSON('./request.json')
-  output <- kwb.heatsine.opencpu::run_optimisation(input)
+  args <- fromJSON('./request.json')
+  output <- do.call(kwb.heatsine.opencpu::run_optimisation, args)
   output_data <- fromJSON(output)
   expect_equal(output_data, fromJSON('./response.json'))
 })
-
