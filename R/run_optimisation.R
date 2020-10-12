@@ -1,4 +1,3 @@
-
 #' JSON wrapper function for kwb.heatsine::run_optimisation
 #' @param json_args arguments for function \link[kwb.heatsine]{run_optimisation}
 #' in json format
@@ -7,17 +6,29 @@
 #' \link[kwb.heatsine]{get_predictions}
 #' @export
 #' @importFrom kwb.heatsine run_optimisation
-#' @importFrom jsonlite fromJSON toJSON
+#' @importFrom jsonlite toJSON
 #' @importFrom tibble as_tibble
 
-run_optimisation <- function (json_args) {
+run_optimisation <- function(data_sw_selected,
+                             data_gw_selected,
+                             retardation_factor = 1.8,
+                             sw_monitoring_id = attr(data_sw_selected, "monitoring_id"),
+                             gw_monitoring_id = attr(data_gw_selected, "monitoring_id"),
+                             limits = c(100, 500),
+                             tolerance = 0.001,
+                             debug = FALSE) {
 
-args <- jsonlite::fromJSON(json_args)
-args$data_gw_selected <- tibble::as_tibble(args$data_gw_selected)
-args$data_sw_selected <- tibble::as_tibble(args$data_sw_selected)
+  args_list <- list(
+    data_sw_selected <- tibble::as_tibble(data_sw_selected),
+    data_gw_selected <- tibble::as_tibble(data_gw_selected),
+    retardation_factor,
+    sw_monitoring_id,
+    gw_monitoring_id,
+    limits,
+    tolerance,
+    debug
+  )
 
-output <- base::do.call(kwb.heatsine::run_optimisation, args)
-
-jsonlite::toJSON(output, pretty = TRUE)
-
+  output <- base::do.call(kwb.heatsine::run_optimisation, args_list)
+  jsonlite::toJSON(output, pretty = TRUE)
 }
