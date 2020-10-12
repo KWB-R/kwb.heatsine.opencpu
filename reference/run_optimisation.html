@@ -132,15 +132,59 @@
     <p>JSON wrapper function for kwb.heatsine::run_optimisation</p>
     </div>
 
-    <pre class="usage"><span class='fu'>run_optimisation</span><span class='op'>(</span><span class='va'>json_args</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>run_optimisation</span><span class='op'>(</span>
+  <span class='va'>data_sw_selected</span>,
+  <span class='va'>data_gw_selected</span>,
+  retardation_factor <span class='op'>=</span> <span class='fl'>1.8</span>,
+  sw_monitoring_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span><span class='op'>(</span><span class='va'>data_sw_selected</span>, <span class='st'>"monitoring_id"</span><span class='op'>)</span>,
+  gw_monitoring_id <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span><span class='op'>(</span><span class='va'>data_gw_selected</span>, <span class='st'>"monitoring_id"</span><span class='op'>)</span>,
+  limits <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>100</span>, <span class='fl'>500</span><span class='op'>)</span>,
+  tolerance <span class='op'>=</span> <span class='fl'>0.001</span>,
+  debug <span class='op'>=</span> <span class='cn'>FALSE</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>json_args</th>
-      <td><p>arguments for function <a href='https://rdrr.io/pkg/kwb.heatsine/man/run_optimisation.html'>run_optimisation</a>
-in json format</p></td>
+      <th>data_sw_selected</th>
+      <td><p>data.frame with daily data temperature data of surface water monitoring point
+with columns "date" (format: "YYYY-MM-DD") and "value" (format: double, temperature in degree Celsius)
+for selected time period</p></td>
+    </tr>
+    <tr>
+      <th>data_gw_selected</th>
+      <td><p>data.frame with daily data temperature data of groundwater monitoring point
+with columns "date" (format: "YYYY-MM-DD") and "value" (format: double, temperature in degree Celsius)
+for selected time period</p></td>
+    </tr>
+    <tr>
+      <th>retardation_factor</th>
+      <td><p>hydraulic retardation factor (default: 2)</p></td>
+    </tr>
+    <tr>
+      <th>sw_monitoring_id</th>
+      <td><p>optional label for surface water monitoring id (default: "surface-water monitoring point"
+or attr(data_sw_selected, "monitoring_id") if data imported with  <code>load_temperature_from_csv</code>), otherwise
+can be any user-defined character string to be used as label for the monitoring point</p></td>
+    </tr>
+    <tr>
+      <th>gw_monitoring_id</th>
+      <td><p>optional label for groundwater monitoring id (default: "surface-water monitoring point"
+or attr(data_sw_selected, "monitoring_id") if data imported with  <code>load_temperature_from_csv</code>), otherwise
+can be any user-defined character string to be used as label for the monitoring point</p></td>
+    </tr>
+    <tr>
+      <th>limits</th>
+      <td><p>minimum/maximum period length for sinus optimisation in days (default: c(100, 500))</p></td>
+    </tr>
+    <tr>
+      <th>tolerance</th>
+      <td><p>the desired accuracy (default: 0.001</p></td>
+    </tr>
+    <tr>
+      <th>debug</th>
+      <td><p>show debug messages (default: FALSE)</p></td>
     </tr>
     </table>
 
@@ -161,7 +205,7 @@ traveltimes ("traveltimes") and special (min, max, turning) points ("points") as
 
       <footer>
       <div class="copyright">
-  <p>Developed by <a href='https://mrustl.de'>Michael Rustler</a>, <a href='https://www.kompetenz-wasser.de/en/project/smart-control/'><img src='https://smart-control.inowas.com/wp-content/uploads/2020/06/cropped-SMART_logo_black.png' height='24' /></a>.</p>
+  <p>Developed by <a href='https://mrustl.de'>Michael Rustler</a>, <a href='https://tu-dresden.de/bu/umwelt/hydro/inowas/about/members/ralf_junghanns'>Ralf Junghanns</a>, <a href='https://www.kompetenz-wasser.de/en/project/smart-control/'><img src='https://smart-control.inowas.com/wp-content/uploads/2020/06/cropped-SMART_logo_black.png' height='24' /></a>.</p>
 </div>
 
 <div class="pkgdown">
