@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(kwb.heatsine.opencpu)
-writeLines(text = kwb.heatsine.opencpu::json_args, "args.json")
+writeLines(text = kwb.heatsine.opencpu::json_args, "request.json")
 ```
 
 ## Input parameters
@@ -24,21 +24,21 @@ writeLines(text = kwb.heatsine.opencpu::json_args, "args.json")
 You need to provide the input parameters 
 for `kwb.heatsine.opencpu::run_optimisation()` 
 required in a JSON data structure as provided 
-in the example data [args.json](../args.json) (for details see: 
+in the example data [request.json](../request.json) (for details see: 
 `kwb.heatsine.opencpu::json_args`).
 
 
 
 ```{r}
 
-args <- jsonlite::fromJSON("args.json")
+args <- jsonlite::fromJSON("request.json")
 
 predictions <- do.call(kwb.heatsine.opencpu::run_optimisation, args)
 
-writeLines(text = predictions, "predictions.json")
+writeLines(text = predictions, "response.json")
 
 ```
 
 The structure of the optimisation results is stored in JSON format in the R object 
 `predictions` and also saved. For inspecting it please open the 
-[predictions.json](../predictions.json) file. 
+[response.json](../response.json) file. 
