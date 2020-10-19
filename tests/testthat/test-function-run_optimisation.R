@@ -5,12 +5,16 @@
 # so that real cases are tested. You should then delete this comment.
 #
 
-test_that("run_optimisation() works", {
-
+test_that("run_optimisation() returns error with no data", {
   expect_error(
-    kwb.heatsine.opencpu:::run_optimisation()
+    kwb.heatsine.opencpu::run_optimisation()
     # Argument "json_args" fehlt (ohne Standardwert)
   )
-
 })
 
+test_that("run_optimization() works properly", {
+  args <- jsonlite::fromJSON('./request.json')
+  output <- do.call(kwb.heatsine.opencpu::run_optimisation, args)
+  output_data <- jsonlite::fromJSON(output)
+  expect_equal(output_data, jsonlite::fromJSON('./response.json'))
+})

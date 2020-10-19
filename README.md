@@ -1,13 +1,14 @@
 [![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/KWB-R/kwb.heatsine.opencpu?branch=main&svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-heatsine-opencpu/branch/main)
 [![Travis build Status](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu.svg?branch=main)](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu)
 [![codecov](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu/branch/main/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu)
-[![Project Status](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Project Status](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/kwb.heatsine.opencpu)]()
 
 # kwb.heatsine.opencpu
 
 Contains higher level functions build on top of R
-package kwb.heatsine for connecting with OPENCPU.
+package [kwb.heatsine](https://github.com/kwb-r/kwb.heatsine) for connecting with 
+[OpenCPU](https://opencpu.org).
 
 ## Installation
 
