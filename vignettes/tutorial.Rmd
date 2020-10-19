@@ -12,6 +12,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
+is_travis <- identical(Sys.getenv("TRAVIS"), "true")
 ```
 
 ```{r setup}
@@ -19,14 +20,28 @@ library(kwb.heatsine.opencpu)
 writeLines(text = kwb.heatsine.opencpu::json_args, "request.json")
 ```
 
-## Input parameters
+
+```{r input_travis, echo=FALSE, results='asis', eval=is_travis}
+cat("## Input parameters
 
 You need to provide the input parameters 
 for `kwb.heatsine.opencpu::run_optimisation()` 
 required in a JSON data structure as provided 
 in the example data [request.json](../request.json) (for details see: 
-`kwb.heatsine.opencpu::json_args`).
+`kwb.heatsine.opencpu::json_args`)."
+)
+```
 
+```{r input_nontravis, echo=FALSE, results='asis', eval=!is_travis}
+cat("## Input parameters
+
+You need to provide the input parameters 
+for `kwb.heatsine.opencpu::run_optimisation()` 
+required in a JSON data structure as provided 
+in the example data [request.json](request.json) (for details see: 
+`kwb.heatsine.opencpu::json_args`)."
+)
+```
 
 
 ```{r}
@@ -39,6 +54,17 @@ writeLines(text = predictions, "response.json")
 
 ```
 
-The structure of the optimisation results is stored in JSON format in the R object 
+```{r output_travis, echo=FALSE, results='asis', eval=is_travis}
+cat("The structure of the optimisation results is stored in JSON format in the R object 
 `predictions` and also saved. For inspecting it please open the 
-[response.json](../response.json) file. 
+[response.json](../response.json) file."
+)
+```
+
+```{r output_nontravis, echo=FALSE, results='asis', eval=!is_travis}
+cat("The structure of the optimisation results is stored in JSON format in the R object 
+`predictions` and also saved. For inspecting it please open the 
+[response.json](response.json) file."
+)
+```
+

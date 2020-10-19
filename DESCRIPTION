@@ -10,8 +10,7 @@ Authors@R:
       person(given = "Ralf",
              family = "Junghanns",
              role = "aut",
-             email = "ralf.junghanns@tu-dresden.de",
-             comment = c(ORCID = "")),
+             email = "ralf.junghanns@tu-dresden.de"),
       person(given = "Hauke",
              family = "Sonnenberg",
              role = "ctb",
@@ -22,24 +21,24 @@ Authors@R:
       person(given = "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
              role = "cph"))
 Description: Contains higher level functions build on top of R
-    package kwb.heatsine for connecting with OPENCPU.
+    package kwb.heatsine for connecting with OpenCPU.
 License: MIT + file LICENSE
 URL: https://github.com/KWB-R/kwb.heatsine.opencpu
 BugReports: https://github.com/KWB-R/kwb.heatsine.opencpu/issues
 Depends: 
     R (>= 2.10)
 Imports: 
-    jsonlite,
-    kwb.heatsine,
-    tibble
+    jsonlite (>= 1.7.1),
+    kwb.heatsine (>= 0.1.5),
+    tibble (>= 3.0.4)
 Suggests: 
-    knitr,
-    rmarkdown,
-    testthat
+    knitr (>= 1.30),
+    rmarkdown (>= 2.4),
+    testthat (>= 2.3.2)
 VignetteBuilder: 
     knitr
 Remotes: 
-    github::kwb-r/kwb.heatsine@62125b3b652e823a1ec543e2e2ca04b531e0ca43
+    github::kwb-r/kwb.heatsine@v0.1.5
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

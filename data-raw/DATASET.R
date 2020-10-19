@@ -6,8 +6,8 @@ load_temp <- function(base_name) {
   )
 }
 
-data_sw <- load_temp("temperature_surface-water_TEGsee-mikrosieb.csv")
-data_gw <- load_temp("temperature_groundwater_TEG343.csv")
+data_sw <- load_temp("temperature_surface-water_Txxsxx-mxxxxsxxx.csv")
+data_gw <- load_temp("temperature_groundwater_Txxxx3.csv")
 
 
 data_sw_selected <- kwb.heatsine::select_timeperiod(
@@ -38,7 +38,8 @@ json_args <- jsonlite::toJSON(args_list, pretty = TRUE)
 
 args_list2 <- jsonlite::fromJSON(json_args)
 args_list2$data_gw_selected <- tibble::as_tibble(args_list2$data_gw_selected)
-args_list2$data_sw_selected <- tibble::as_tibble(args_list2s$data_sw_selected)
+args_list2$data_sw_selected <- tibble::as_tibble(args_list2$data_sw_selected)
 identical(args_list, args_list2)
 
 usethis::use_data(json_args, overwrite = TRUE)
+writeLines(json_args, "tests/testthat/request.json")

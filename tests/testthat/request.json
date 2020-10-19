@@ -2927,10 +2927,10 @@
       "value": 11.2
     }
   ],
-  "retardation_factor": 1.8,
-  "sw_monitoring_id": "TEGsee-mikrosieb",
-  "gw_monitoring_id": "TEG343",
+  "retardation_factor": [1.8],
+  "sw_monitoring_id": ["Txxsxx-mxxxxsxxx"],
+  "gw_monitoring_id": ["Txxxx3"],
   "limits": [100, 500],
-  "tolerance": 0.001,
-  "debug": false
+  "tolerance": [0.001],
+  "debug": [false]
 }
