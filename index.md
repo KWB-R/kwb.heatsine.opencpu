@@ -1,5 +1,5 @@
-[![Appveyor build Status](https://ci.appveyor.com/api/projects/status/github/KWB-R/kwb.heatsine.opencpu?branch=main&svg=true)](https://ci.appveyor.com/project/KWB-R/kwb-heatsine-opencpu/branch/main)
-[![Travis build Status](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu.svg?branch=main)](https://travis-ci.com/KWB-R/kwb.heatsine.opencpu)
+[![R-CMD-check](https://github.com/KWB-R/kwb.heatsine.opencpu/workflows/R-CMD-check/badge.svg)](https://github.com/KWB-R/kwb.heatsine.opencpu/actions?query=workflow%3AR-CMD-check)
+[![pkgdown](https://github.com/KWB-R/kwb.heatsine.opencpu/workflows/pkgdown/badge.svg)](https://github.com/KWB-R/kwb.heatsine.opencpu/actions?query=workflow%3Apkgdown)
 [![codecov](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu/branch/main/graphs/badge.svg)](https://codecov.io/github/KWB-R/kwb.heatsine.opencpu)
 [![Project Status](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/kwb.heatsine.opencpu)]()
